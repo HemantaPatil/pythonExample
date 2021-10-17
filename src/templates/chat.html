@@ -8,8 +8,8 @@
         </form>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.1/socket.io.js"></script>
         <script>
-            const socket = io.connect('https://' + document.domain);
-
+            var origin = window.location.origin;
+            const socket = io.connect(origin);
             socket.on('connect', function(){
                 socket.emit('join_room',{
                     username: "{{username}}",
