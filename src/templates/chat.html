@@ -6,10 +6,11 @@
             <input type="text" id="message_input" placeholder="Enter your message here">
             <button type="submit">Send</button>    
         </form>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.1/socket.io.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.1/socket.io.js"
+            integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous">
+        </script>
         <script>
             const origin = window.location.origin;
-            alert(origin);
             const socket = io.connect(origin);
             socket.on('connect', function(){
                 socket.emit('join_room',{
