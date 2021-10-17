@@ -9,6 +9,10 @@ socketio = SocketIO(app)
 def home():
     return render_template("index.html")
 
+@app.route("/")
+def index():
+    return("Chimmu welcome to my 1st Python web application, deployed on Heroku Cloud Platform")
+    
 @app.route('/chat')
 def chat():
     username = request.args.get("username")
