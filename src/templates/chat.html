@@ -8,7 +8,8 @@
         </form>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.1/socket.io.js"></script>
         <script>
-            var origin = window.location.origin;
+            const origin = window.location.origin;
+            alert(origin);
             const socket = io.connect(origin);
             socket.on('connect', function(){
                 socket.emit('join_room',{
